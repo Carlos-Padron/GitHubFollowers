@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0729CE5B257F2A20009C64C9 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE5A257F2A20009C64C9 /* GFTitleLabel.swift */; };
+		0729CE5E257F2C1B009C64C9 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE5D257F2C1B009C64C9 /* GFBodyLabel.swift */; };
+		0729CE61257F2DAD009C64C9 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE60257F2DAD009C64C9 /* GFAlertVC.swift */; };
+		0729CE65257F3B4E009C64C9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE64257F3B4E009C64C9 /* UIViewController+Ext.swift */; };
 		07371F7E2577679900798A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371F7D2577679900798A8D /* AppDelegate.swift */; };
 		07371F802577679900798A8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371F7F2577679900798A8D /* SceneDelegate.swift */; };
 		07371F872577679A00798A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07371F862577679A00798A8D /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0729CE5A257F2A20009C64C9 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
+		0729CE5D257F2C1B009C64C9 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		0729CE60257F2DAD009C64C9 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		0729CE64257F3B4E009C64C9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		07371F7A2577679900798A8D /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07371F7D2577679900798A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07371F7F2577679900798A8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 				07371F862577679A00798A8D /* Assets.xcassets */,
 				07371F882577679A00798A8D /* LaunchScreen.storyboard */,
 				07371F8B2577679A00798A8D /* Info.plist */,
+				0729CE64257F3B4E009C64C9 /* UIViewController+Ext.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -86,6 +95,8 @@
 			children = (
 				0788999B257894F50008E474 /* GFButton.swift */,
 				07D3404925793B2200590C9E /* GFTextField.swift */,
+				0729CE5A257F2A20009C64C9 /* GFTitleLabel.swift */,
+				0729CE5D257F2C1B009C64C9 /* GFBodyLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 				07371F9425776F5700798A8D /* SearchVC.swift */,
 				07371F9725776F9800798A8D /* FavoritesListVC.swift */,
 				0795A34F257C206C00F7EEB9 /* FollowerListVC.swift */,
+				0729CE60257F2DAD009C64C9 /* GFAlertVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,9 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0729CE5B257F2A20009C64C9 /* GFTitleLabel.swift in Sources */,
 				07D3404A25793B2200590C9E /* GFTextField.swift in Sources */,
 				07371F9825776F9800798A8D /* FavoritesListVC.swift in Sources */,
+				0729CE65257F3B4E009C64C9 /* UIViewController+Ext.swift in Sources */,
 				0788999C257894F50008E474 /* GFButton.swift in Sources */,
+				0729CE61257F2DAD009C64C9 /* GFAlertVC.swift in Sources */,
+				0729CE5E257F2C1B009C64C9 /* GFBodyLabel.swift in Sources */,
 				07371F9525776F5700798A8D /* SearchVC.swift in Sources */,
 				07371F7E2577679900798A8D /* AppDelegate.swift in Sources */,
 				07371F802577679900798A8D /* SceneDelegate.swift in Sources */,
