@@ -18,6 +18,18 @@ class FollowerListVC: UIViewController {
         
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        NetworkManager.shared.getFollowers(for: username, page: 1) { (followers, errorMessage) in
+            guard let followers = followers else{
+                
+                self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: errorMessage!, buttonTitle: "Ok")
+                return
+            }
+            
+           
+            
+            print(followers.count)
+        }
         // Do any additional setup after loading the view.
     }
     
