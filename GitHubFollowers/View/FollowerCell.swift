@@ -23,6 +23,10 @@ class FollowerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(follower : Follower){
+        self.username.text = follower.login
+    }
+    
     func configure(){
         let padding: CGFloat = 8
         
@@ -33,11 +37,11 @@ class FollowerCell: UICollectionViewCell {
             avatarImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             avatarImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             avatarImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            avatarImage.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            avatarImage.heightAnchor.constraint(equalTo: avatarImage.widthAnchor),
             
-            username.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            username.leadingAnchor.constraint(equalTo: avatarImage.leadingAnchor),
-            username.trailingAnchor.constraint(equalTo: avatarImage.trailingAnchor),
+            username.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 12),
+            username.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            username.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             username.heightAnchor.constraint(equalToConstant: 20)
         ])
             
