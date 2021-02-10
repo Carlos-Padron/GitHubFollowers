@@ -52,14 +52,19 @@ class FollowerListVC: UIViewController {
     }
     
     func getFollowers(username: String, page: Int){
+        showLoadinView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self](result) in
             guard let self = self else { return }
+            self.dismissLoadingView()
+            
             switch result{
+            
             case .success(let followers):
                 print(followers.count)
                 if followers.count < 100 { self.hasMoreFollowers = false}
                 self.followers.append(contentsOf: followers) 
                 self.updateData()
+                
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
             }
@@ -91,7 +96,10 @@ extension FollowerListVC: UICollectionViewDelegate{
         let yOffset        = scrollView.contentOffset.y
         let contentHeight  = scrollView.contentSize.height
         let height         = scrollView.frame.height
-        
+        print("yOffset: \(yOffset)")
+        print("contentHeight: \(contentHeight)")
+        print("height: \(height)")
+        print("=======")
         if yOffset > contentHeight - height {
             guard hasMoreFollowers else{ return }
             page += 1
