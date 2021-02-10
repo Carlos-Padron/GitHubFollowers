@@ -50,5 +50,13 @@ extension UIViewController {
     }
     
     
+    func showEmptyState(){
+        DispatchQueue.main.async {
+            let emptyStateView = GFEmptyState(message: "This user doesn't have any followers. 👌😫")
+            emptyStateView.frame = self.view.frame
+            self.view.addSubview(emptyStateView)
+        }
+    }
+    
     
 }

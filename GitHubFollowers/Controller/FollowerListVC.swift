@@ -62,7 +62,12 @@ class FollowerListVC: UIViewController {
             case .success(let followers):
                 print(followers.count)
                 if followers.count < 100 { self.hasMoreFollowers = false}
-                self.followers.append(contentsOf: followers) 
+                self.followers.append(contentsOf: followers)
+                
+                if self.followers.isEmpty {
+                    self.showEmptyState()
+                    return
+                }
                 self.updateData()
                 
             case .failure(let error):

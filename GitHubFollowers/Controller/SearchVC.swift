@@ -30,7 +30,7 @@ class SearchVC: UIViewController {
     
     @objc func pushFollowerListVC(){
         
-        guard usernameTextField.text != nil, usernameTextField.text != "" else {
+        guard usernameTextField.text != nil, usernameTextField.text?.trimmingCharacters(in: .whitespaces) != "" else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 🐈", buttonTitle: "OK!")
             return
         }
