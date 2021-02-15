@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070328AF25D8D7F800862B1E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070328AE25D8D7F800862B1E /* Constants.swift */; };
 		070A094325D3A38C00F5AF6B /* GFEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A094225D3A38C00F5AF6B /* GFEmptyState.swift */; };
 		0729CE5B257F2A20009C64C9 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE5A257F2A20009C64C9 /* GFTitleLabel.swift */; };
 		0729CE5E257F2C1B009C64C9 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729CE5D257F2C1B009C64C9 /* GFBodyLabel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070328AE25D8D7F800862B1E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		070A094225D3A38C00F5AF6B /* GFEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyState.swift; sourceTree = "<group>"; };
 		0729CE5A257F2A20009C64C9 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		0729CE5D257F2C1B009C64C9 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				079A726225943AAE0089B122 /* UIHelper.swift */,
+				070328AE25D8D7F800862B1E /* Constants.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				0729CE5B257F2A20009C64C9 /* GFTitleLabel.swift in Sources */,
 				07D3404A25793B2200590C9E /* GFTextField.swift in Sources */,
 				07371F9825776F9800798A8D /* FavoritesListVC.swift in Sources */,
+				070328AF25D8D7F800862B1E /* Constants.swift in Sources */,
 				0729CE65257F3B4E009C64C9 /* UIViewController+Ext.swift in Sources */,
 				079A726325943AAE0089B122 /* UIHelper.swift in Sources */,
 				0788999C257894F50008E474 /* GFButton.swift in Sources */,
