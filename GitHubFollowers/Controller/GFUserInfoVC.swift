@@ -37,6 +37,8 @@ class GFUserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: UserInfotHeaderVC(user: user), to: self.headerView)
+                    self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
+                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
                 }
                     break
                 
@@ -72,12 +74,12 @@ class GFUserInfoVC: UIViewController {
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             headerView.heightAnchor.constraint(equalToConstant: 180),
             
-            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 20),
             itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             itemViewOne.heightAnchor.constraint(equalToConstant: 140),
             
-            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor),
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: 20),
             itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             itemViewTwo.heightAnchor.constraint(equalToConstant: 140)
