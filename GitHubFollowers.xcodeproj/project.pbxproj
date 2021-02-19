@@ -132,6 +132,8 @@
 				07D9948725DCC17F00295FA6 /* GFItemInfoView.swift */,
 				07D9948D25DE1B1300295FA6 /* GFRepoItemVC.swift */,
 				07D9949225DE20F000295FA6 /* GFFollowerItemVC.swift */,
+				07BAB41525D654CE00C4D902 /* UserInfotHeaderVC.swift */,
+				07D9948A25DE14BE00295FA6 /* GFItemInfoVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,10 +233,8 @@
 				07371F9425776F5700798A8D /* SearchVC.swift */,
 				07371F9725776F9800798A8D /* FavoritesListVC.swift */,
 				0795A34F257C206C00F7EEB9 /* FollowerListVC.swift */,
-				07D9948A25DE14BE00295FA6 /* GFItemInfoVC.swift */,
 				0729CE60257F2DAD009C64C9 /* GFAlertVC.swift */,
 				07BAB41225D6327A00C4D902 /* GFUserInfoVC.swift */,
-				07BAB41525D654CE00C4D902 /* UserInfotHeaderVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
