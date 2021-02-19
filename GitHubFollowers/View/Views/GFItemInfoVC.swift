@@ -14,6 +14,7 @@ class GFItemInfoVC: UIViewController {
     let itemInfoViewTwo  = GFItemInfoView()
     let actionButton     = GFButton()
     
+    weak var delegate: userInfonVCDelegate!
     var user: User!
     
     init(user: User) {
@@ -28,10 +29,17 @@ class GFItemInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
+        attachActionToButton()
         layOutUI()
         configureStackView()
         // Do any additional setup after loading the view.
     }
+    
+    private func attachActionToButton(){
+        actionButton.addTarget(self, action: #selector(onTap), for: .touchUpInside)
+    }
+    
+    @objc func onTap(){}
     
     private func configureBackgroundView(){
         view.backgroundColor     = .secondarySystemBackground
