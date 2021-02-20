@@ -47,6 +47,39 @@ class FollowerListVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let favoriteBtn =  UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addFavorite))
+        navigationItem.rightBarButtonItem = favoriteBtn
+
+    }
+    
+    @objc func addFavorite(){
+        showLoadinView()
+        
+        NetworkManager.shared.getUserInfo(username: username) { [weak self] result in
+            guard let self = self else { return }
+            switch result{
+                case .success(let user):
+                    let follower = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                    PersistanceManager.updateWith(follower: follower, actionType: .add) { [weak self] error in
+                        guard let self = self else { return }
+                        
+                        guard let error = error else {
+                            self.presentGFAlertOnMainThread(title: "Success!!!", message: "You have successfully favorite this user! 😭👌♥️", buttonTitle: "Ok 😮")
+                            return
+                        }
+                        
+                        self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "😡")
+                        
+                        
+                    }
+                    
+                    break
+                case .failure(let error):
+                    self.presentGFAlertOnMainThread(title: "Oops! Somthing went wrong", message: error.rawValue, buttonTitle: "Ok :(")
+            }
+        }
+        
     }
     
     

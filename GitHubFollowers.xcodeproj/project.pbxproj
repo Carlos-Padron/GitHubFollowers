@@ -38,6 +38,7 @@
 		07D9949D25DF614200295FA6 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9949C25DF614200295FA6 /* String+Ext.swift */; };
 		07E0ACCA2580B22900112054 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0ACC92580B22900112054 /* Follower.swift */; };
 		07E0ACCD2580B38200112054 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0ACCC2580B38200112054 /* User.swift */; };
+		07E99D6E25E1707B00C232E5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E99D6D25E1707B00C232E5 /* PersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		07D9949C25DF614200295FA6 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		07E0ACC92580B22900112054 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		07E0ACCC2580B38200112054 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		07E99D6D25E1707B00C232E5 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				07513FDF2581EF11002D9119 /* NetworkManager.swift */,
+				07E99D6D25E1707B00C232E5 /* PersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				07D9948825DCC17F00295FA6 /* GFItemInfoView.swift in Sources */,
 				0729CE61257F2DAD009C64C9 /* GFAlertVC.swift in Sources */,
 				079A89DE258537A900CC58D2 /* FollowerCell.swift in Sources */,
+				07E99D6E25E1707B00C232E5 /* PersistanceManager.swift in Sources */,
 				0729CE5E257F2C1B009C64C9 /* GFBodyLabel.swift in Sources */,
 				07513FE525835143002D9119 /* ErrorMessages.swift in Sources */,
 				07D9949D25DF614200295FA6 /* String+Ext.swift in Sources */,
