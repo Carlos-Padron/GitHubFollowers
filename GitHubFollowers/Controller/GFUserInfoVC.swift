@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol userInfonVCDelegate {
+protocol userInfonVCDelegate: class {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User)
 }
@@ -22,7 +22,7 @@ class GFUserInfoVC: UIViewController {
     let dateLabel   = GFBodyLabel(textAlignment: .center)
     
     var itemViews: [UIView] = []
-    
+    weak var delegate: followerListVCDelegate!
     var username: String!
 
     override func viewDidLoad() {
@@ -55,13 +55,15 @@ class GFUserInfoVC: UIViewController {
     }
     
     func configureUIElements(with user: User){
-        let repoItemVC             = GFRepoItemVC(user: user)
-        repoItemVC.delegate        = self
         
-        let followersItemVC        = GFRepoItemVC(user: user)
-        followersItemVC.delegate   = self
         
         DispatchQueue.main.async {
+            let repoItemVC             = GFRepoItemVC(user: user)
+            repoItemVC.delegate        = self
+            
+            let followersItemVC        = GFFollowerItemVC(user: user)
+            followersItemVC.delegate   = self
+            
             self.add(childVC: UserInfotHeaderVC(user: user), to: self.headerView)
             self.add(childVC: repoItemVC, to: self.itemViewOne)
             self.add(childVC: followersItemVC, to: self.itemViewTwo)
@@ -131,7 +133,12 @@ extension GFUserInfoVC: userInfonVCDelegate{
     }
     
     func didTapGetFollowers(for user: User) {
-        
+        guard  user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No Followers", message: "This user has no followers", buttonTitle: "Ok 😪")
+            return
+        }
+        dismissVC()
+        delegate.didRequestFollowers(for: user.login)
     }
     
    
