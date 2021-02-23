@@ -69,14 +69,15 @@ class FollowerListVC: UIViewController {
                             return
                         }
                         
-                        self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "😡")
+                        self.presentGFAlertOnMainThread(title: ":0", message: error.rawValue, buttonTitle: "😡")
                         
                         
                     }
-                    
+                    self.dismissLoadingView()
                     break
                 case .failure(let error):
                     self.presentGFAlertOnMainThread(title: "Oops! Somthing went wrong", message: error.rawValue, buttonTitle: "Ok :(")
+                    self.dismissLoadingView()
             }
         }
         
